@@ -8,6 +8,10 @@ import static ueb02.Duplikate.findeDuplikate;
 class DuplikateTest {
 	@Test
 	void testFindeDuplikate() {
+		String t0 = "a a a b c d c a d A B C A";
+		StringSet s0 = findeDuplikate(t0);
+		assertEquals(4, s0.size());  // Ulm und um
+
 		String t1 = "In Ulm! und um Ulm! und um Ulm herum!";
 
 		StringSet s1 = findeDuplikate(t1);
